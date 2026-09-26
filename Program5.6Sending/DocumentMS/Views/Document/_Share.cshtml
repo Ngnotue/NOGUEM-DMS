@@ -1,0 +1,161 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+<form id="frmShare">
+    <div class="row">
+        <div class="col-6 col-sm-6">
+            <div class="form-group row">
+                <label asp-for="SendEmailViewModel.SenderEmailId" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-8">
+                    <select asp-for="SendEmailViewModel.SenderEmailId" asp-items="@ViewBag.GetddlEmailConfig"
+                        id="SenderEmailId" class="form-control" style="width:100%;">
+                    </select>
+                    <span asp-validation-for="SendEmailViewModel.SenderEmailId" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-6">
+            <div class="form-group row">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-1">
+                    <input type="checkbox" class="form-inline" id="chkTypeReceiverEmail" />
+                </div>
+                <div class="col-sm-8 text-left">
+                    <span>Type Email</span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="SendEmailViewModel.ReceiverEmail" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <div id="divReceiverEmailId">
+                        <select asp-for="SendEmailViewModel.ReceiverEmailId" asp-items="@ViewBag.GetddlUserEmail"
+                            id="ReceiverEmailId" class="form-control" style="width:100%;">
+                            <option disabled selected>--- SELECT ---</option>
+                        </select>
+                    </div>
+                    <div id="divReceiverEmail">
+                        <input type="text" asp-for="SendEmailViewModel.ReceiverEmail" id="ReceiverEmail"
+                            class="form-control" placeholder="Receiver Email">
+                    </div>
+                    <span asp-validation-for="SendEmailViewModel.ReceiverEmailId" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="SendEmailViewModel.Subject" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="SendEmailViewModel.Subject" class="form-control" id="Subject" type="text" />
+            <span asp-validation-for="SendEmailViewModel.Subject" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="SendEmailViewModel.Body" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <textarea asp-for="SendEmailViewModel.Body" id="Body" class="form-control" rows="6"></textarea>
+            <span asp-validation-for="SendEmailViewModel.Body" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input type="button" id="btnSend" value="Send" onclick="ShareDocUsingEmail('@Model.Id')"
+                class="btn btn-danger">
+        </div>
+    </div>
+</form>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<script type="text/javascript">
+    $("#SenderEmailId").select2();
+    $("#ReceiverEmailId").select2();
+
+    $(document).ready(function () {
+        var _divReceiverEmail = document.getElementById("divReceiverEmail");
+        _divReceiverEmail.style.display = "none";
+    });
+
+    $("body").on("click", "#chkTypeReceiverEmail", function () {
+        var _divReceiverEmailId = document.getElementById("divReceiverEmailId");
+        var _divReceiverEmail = document.getElementById("divReceiverEmail");
+
+        if ($('#chkTypeReceiverEmail').is(":checked")) {
+            _divReceiverEmailId.style.display = "none";
+            _divReceiverEmail.style.display = "block";
+            $('#ReceiverEmail').focus();
+        }
+        else {
+            _divReceiverEmailId.style.display = "block";
+            _divReceiverEmail.style.display = "none";
+            $('#ReceiverEmailId').focus();
+        }
+    });
+
+
+    var ShareDocUsingEmail = function (Id) {
+        if (!$("#frmShare").valid()) {
+            return;
+        }
+
+        $("#btnSend").val("Sending...");
+        $('#btnSend').attr('disabled', 'disabled');
+        var _PreparedfrmShareObj = PreparedfrmShareObj();
+
+        $("#btnSend").LoadingOverlay("show", {
+            background: "rgba(165, 190, 100, 0.5)"
+        });
+        $("#btnSend").LoadingOverlay("show");
+
+        $.ajax({
+            type: "POST",
+            url: "/Document/ShareDocUsingEmail",
+            data: _PreparedfrmShareObj,
+            processData: false,
+            contentType: false,
+            success: function (result) {
+                $("#btnSend").LoadingOverlay("hide", true);
+
+                Swal.fire({
+                    title: result.AlertMessage,
+                    icon: "success"
+                }).then(function () {
+                    $("#btnSend").val("Send");
+                    $('#btnSend').removeAttr('disabled');
+
+                    Details(result.Id);
+                    setTimeout(function () {
+                        activaTab('divShare');
+                    }, 300);
+
+                    $('#ReceiverEmail').focus();
+                });
+            },
+            error: function (errormessage) {
+                $("#btnSend").val("Send");
+                $('#btnSend').removeAttr('disabled');
+                SwalCustomUIAlert(errormessage.responseText, "warning", 'swal-wide');
+            }
+        });
+    }
+
+    var PreparedfrmShareObj = function () {
+        var _FormData = new FormData()
+        _FormData.append('DocumentId', $("#Id").val())
+        _FormData.append('SenderEmailId', $("#SenderEmailId").val())
+        _FormData.append('Subject', $("#Subject").val())
+        var _Body = $('#Body').val().replace(/(\r\n|\n|\r)/gm, '<br />');
+        _FormData.append('Body', _Body)
+
+        if ($('#chkTypeReceiverEmail').is(":checked")) {
+            _FormData.append('ReceiverEmail', $("#ReceiverEmail").val())
+        }
+        else {
+            _FormData.append('ReceiverEmail', $("#ReceiverEmailId option:selected").text())
+        }
+        return _FormData;
+    }
+</script>

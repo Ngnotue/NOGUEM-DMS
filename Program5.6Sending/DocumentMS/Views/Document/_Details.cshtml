@@ -1,0 +1,86 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+<div class="row" style="overflow-x:auto;">
+    <div class="col-md-12">
+        <table class="DMSRootColorTable">
+            <tr>
+                <th>Id</th>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <th>Files Dir Name</th>
+                <td>
+                    <div class="user-panel mt-2 pb-2 mb-2 d-flex">
+                    <div class="image">
+                        <img src="/images/dashboard/doc/z_common_dir2.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        @Model.FilesDirName
+                    </div>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Files Path</th>
+                <td>@Model.FilesPath</td>
+            </tr>
+            <tr>
+                <th>Categories</th>
+                <td>@Model.CategoriesDisplay</td>
+            </tr>
+            <tr>
+                <th>Assign Employee</th>
+                <td>@Model.AssignEmployeeDisplay</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>@Model.DocumentStatusDisplay</td>
+            </tr>
+            <tr>
+                <th>Save In DB</th>
+                <td>@Model.IsFileSaveInDB</td>
+            </tr>
+            <tr>
+                <th>Tag 01</th>
+                <td>@Model.Tag01</td>
+            </tr>
+            <tr>
+                <th>Tag 02</th>
+                <td>@Model.Tag02</td>
+            </tr>
+            <tr>
+                <th>Tag 03</th>
+                <td>@Model.Tag03</td>
+            </tr>
+            <tr>
+                <th>Tag 04</th>
+                <td>@Model.Tag04</td>
+            </tr>
+            <tr>
+                <th>Tag 05</th>
+                <td>@Model.Tag05</td>
+            </tr>
+
+            <tr>
+                <th>Created Date</th>
+                <td>@Model.CreatedDate</td>
+            </tr>
+            <tr>
+                <th>Modified Date</th>
+                <td>@Model.ModifiedDate</td>
+            </tr>
+            <tr>
+                <th>Created By</th>
+                <td>@Model.CreatedBy</td>
+            </tr>
+            <tr>
+                <th>Modified By</th>
+                <td>@Model.ModifiedBy</td>
+            </tr>
+        </table>
+    </div>
+</div>

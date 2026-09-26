@@ -1,0 +1,80 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+<input type="hidden" asp-for="Id" />
+
+<div class="card card-primary card-outline card-tabs">
+    <div class="card-header p-0 pt-1 border-bottom-0">
+        <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="DocumentInfo" data-toggle="pill" href="#divDocumentInfo" role="tab"
+                    aria-controls="DocumentInfo" aria-selected="true">Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="DocumetFileDetails" data-toggle="pill" href="#divDocumetFileDetails" role="tab"
+                    aria-controls="DocumetFileDetails" aria-selected="true">File Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="DocumentView" data-toggle="pill" href="#divDocumentView" role="tab"
+                    aria-controls="DocumentView" aria-selected="true"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="Comment" data-toggle="pill" href="#divComment" role="tab"
+                    aria-controls="Comment" aria-selected="true">Comment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="Assign" data-toggle="pill" href="#divAssign" role="tab" aria-controls="Assign"
+                    aria-selected="false">Assign</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="History" data-toggle="pill" href="#divHistory" role="tab"
+                    aria-controls="History" aria-selected="true">History</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card-body">
+        <div class="tab-content" id="tabContent">
+            <div class="tab-pane fade show active" id="divDocumentInfo" role="tabpanel"
+                aria-labelledby="divDocumentInfo">
+                <partial name="~/Views/Document/_Details.cshtml" />
+            </div>
+            <div class="tab-pane fade show" id="divDocumetFileDetails" role="tabpanel"
+                aria-labelledby="divDocumetFileDetails">
+                <partial name="_DocumentFileDetail.cshtml" />
+            </div>
+            <div class="tab-pane fade show" id="divDocumentView" role="tabpanel" aria-labelledby="divDocumentView">
+                <div id="mswordcontainer" class=""></div>
+                <div id="divFileView">                  
+                    <embed src="" id="embedFileViewer" type="application/pdf" height="700px" width="100%">                  
+                </div>
+            </div>
+            <div class="tab-pane fade show" id="divComment" role="tabpanel" aria-labelledby="divComment">
+                <partial name="_AddNewComment.cshtml" />
+            </div>
+            <div class="tab-pane fade" id="divAssign" role="tabpanel" aria-labelledby="divAssign">
+                @if (Model.AssignEmployeeId == 0)
+                {
+                    <h5>This Document is not assigned yet.</h5>
+                }
+                else
+                {
+                    <partial name="~/Views/UserManagement/_ViewUserDetails.cshtml" model="Model.UserProfileCRUDViewModel" />
+                }
+            </div>
+            <div class="tab-pane fade show" id="divHistory" role="tabpanel" aria-labelledby="divHistory">
+                <partial name="~/Views/Document/_DocumentHistory.cshtml" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jszip.min.js"></script>
+<script src="~/lib/docx-preview.js"></script>
+
+<script>
+    var ActiveFocus = function () {
+        setTimeout(function () {
+            $('#ReceiverEmailId').focus();
+        }, 300);
+    };
+</script>

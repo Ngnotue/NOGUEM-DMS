@@ -1,0 +1,68 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+<partial name="_DocumentFileDetail.cshtml" />
+
+<hr />
+<div class="row">
+    <div class="col-2 col-sm-2">
+        <label asp-for="IsFileSaveInDB" class="col-form-label"></label>
+    </div>
+    <div class="col-2 col-sm-2">
+        <input asp-for="IsFileSaveInDB" class="form-control" id="IsFileSaveInDB" type="checkbox" />
+    </div>
+    <div class="col-8 col-sm-8"></div>
+
+    <div class="col-5 col-sm-5">
+        <span class="control-fileupload">
+            <label for="file">Choose a file :</label>
+            <input type="file" asp-for="Files" id="Files" multiple />
+        </span>
+    </div>
+    <div class="col-7 col-sm-7">
+        <input type="button" id="btnAddFilesInEditMode" value="Add New File" onclick="SaveAddFilesInEditMode()"
+            class="btn btn-success">
+    </div>
+</div>
+
+<script>
+    var SaveAddFilesInEditMode = function () {
+        if ($("#Files").val() === "" || $("#Files").val() === null) {
+            Swal.fire({
+                title: 'File field can not be null or empty.',
+                icon: "warning",
+                onAfterClose: () => {
+                    $("#Files").focus();
+                }
+            });
+            return;
+        }
+
+        $("#btnAddFilesInEditMode").val("Please Wait");
+        $('#btnAddFilesInEditMode').attr('disabled', 'disabled');
+        var _PreparedFormObj = PreparedFormObj();
+
+        $.ajax({
+            type: "POST",
+            url: "/Document/SaveAddFilesInEditMode",
+            data: _PreparedFormObj,
+            processData: false,
+            contentType: false,
+            success: function (result) {
+                if (result != null) {
+                    $('#tblDocumentFileDetails tbody').empty();
+
+                    result.forEach(LoadDocumentFileRowFromDB);
+                    var message = "Document added successfully.";
+                    toastr.success(message);
+
+                    $("#btnAddFilesInEditMode").val("Add New File");
+                    $('#btnAddFilesInEditMode').removeAttr('disabled');
+                    $("#Files").val(null);
+                }
+            },
+            error: function (errormessage) {
+                SwalSimpleAlert(errormessage.responseText, "warning");
+            }
+        });
+    }
+</script>

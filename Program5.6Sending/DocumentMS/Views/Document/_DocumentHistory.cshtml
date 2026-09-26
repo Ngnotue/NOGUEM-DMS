@@ -1,0 +1,30 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+<h5>Documen ID: @Model.Id, Name: @Model.Name</h5>
+<table class="DMSRootColorTable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Assign Employee</th>
+            <th>Action</th>
+            <th>Note</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in Model.listDocumentHistoryCRUDViewModel)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.AssignEmployeeDisplay</td>
+                    <td>@item.Action</td>
+                    <td>@item.Note</td>
+                    <td>@String.Format("{0:f}", item.CreatedDate)</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+

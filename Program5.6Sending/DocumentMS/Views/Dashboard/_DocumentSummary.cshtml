@@ -1,0 +1,58 @@
+﻿@model DocumentMS.Models.DashboardViewModel.DashboardSummaryViewModel
+
+<br />
+
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "Document")">
+            <div class="info-box">
+                <span class="box">
+                    <img src="/images/dashboard/doc/folders.png" alt="Total documents icon">
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Total Document</span>
+                    <h2>@Model.TotalDocument</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "DocumentCategories")">
+            <div class="info-box">
+                <span class="box">
+                    <img  src="/images/dashboard/doc/options.png" alt="Total categories icon">
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Total Categories</span>
+                    <h2>@Model.TotalDocCategories</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "DocumentStatus")">
+            <div class="info-box">
+                <span class="box">
+                    <img  src="/images/dashboard/doc/graphs.png" alt="Total document status icon">
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Total Doc Status</span>
+                    <h2>@Model.TotalDocumentStatus</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "Comment")">
+            <div class="info-box">
+                <span class="box">
+                    <img src="/images/dashboard/doc/comments.png" alt="Total comment icon">
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Total Comment</span>
+                    <h2>@Model.TotalComment</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

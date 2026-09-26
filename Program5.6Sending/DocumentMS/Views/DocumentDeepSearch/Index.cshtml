@@ -1,0 +1,140 @@
+<div class="wrapper">
+    <div class="panel panel-hash">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-2">
+                    <h5><b>Document List</b></h5>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="DocumentDeepSearch" class="form-control"
+                        placeholder="Document Deep Search" />
+                </div>
+                <div class="col-md-1">
+                    <input type="button" id="btnFind" class="btn btn-success" onclick="SearchInInnerDoc();"
+                        style="width: 100%;" value="Find" />
+                </div>
+                <div class="col-md-1">
+                    <a href="#" onclick="ResetDeepSearch();">Reset</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body scroll panel-height">
+            <table id="tblDocumentDeepSearch" class="DMSRootColorTable" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Categories</th>
+                        <th>Assign</th>
+                        <th>Status</th>
+                        <th>Created Date</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .panel-heading {
+        padding: 0px 0px 0px 5px;
+    }
+
+    .panel-body {
+        padding: 5px;
+    }
+
+    .h4 {
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        box-shadow: none;
+        border-color: green;
+    }
+
+    .dataTables_filter {
+        display: none;
+    }
+</style>
+
+<script src="~/js/Document/Document_CRUD.js"></script>
+<script src="~/js/DocumentDeepSearch/DocumentDeepSearch_Datatable.js"></script>
+
+<script>
+    $(document).ready(function () {
+        DataTableCustomSearchBox('400px', 'Search Document');
+    });
+
+    var ResetDeepSearch = function () {
+        $("#DocumentDeepSearch").val('');
+        $("#DocumentDeepSearch").focus();
+        var _tblDocumentDeepSearch = $("#tblDocumentDeepSearch").DataTable();
+        _tblDocumentDeepSearch.clear();
+        _tblDocumentDeepSearch.destroy();
+        LoadDataTable();
+    }
+
+    var SearchInInnerDoc = function () {
+        $("#btnFind").val("Please Wait");
+        $('#btnFind').attr('disabled', 'disabled');
+
+        $("#btnFind").LoadingOverlay("show", {
+            background: "rgba(165, 190, 100, 0.5)"
+        });
+        $("#btnFind").LoadingOverlay("show");
+
+        if (!FieldValidation('#DocumentDeepSearch')) {
+            FieldValidationAlert('#DocumentDeepSearch', 'Search Field Can not Empty.', "warning");
+            $("#btnFind").val("Find");
+            $('#btnFind').removeAttr('disabled');
+            $("#btnFind").LoadingOverlay("hide", true);
+            return;
+        }
+
+        var _DocumentDeepSearch = $("#DocumentDeepSearch").val();
+        $.ajax({
+            type: "POST",
+            url: "/DocumentDeepSearch/SearchInInnerDoc?SearchItem=" + _DocumentDeepSearch,
+            success: function (result) {
+                if (result != null || result == '') {
+                    var _tblDocumentDeepSearch = $("#tblDocumentDeepSearch").DataTable();
+                    _tblDocumentDeepSearch.clear();
+                    _tblDocumentDeepSearch.destroy();
+                    LoadHTMLTableData(result);
+                    $("#tblDocumentDeepSearch").DataTable({
+                    });
+                }
+                else {
+                    FieldValidationAlert('#DocumentDeepSearch', 'No Fila Found with this Text.', "warning");
+                }
+
+                $("#btnFind").val("Find");
+                $('#btnFind').removeAttr('disabled');
+                $("#btnFind").LoadingOverlay("hide", true);
+            }
+        });
+    }
+
+    var LoadHTMLTableData = function (result) {
+        var trHTML = '';
+        $.each(result, function (i, item) {
+            if (item != null) {
+                trHTML += '<tr><td>'
+                    + item.Id + '</td><td>'
+                    + "<a href='#' onclick=Details(" + item.Id + ");>" + item.Name + "</a>" + '</td><td>'
+                    + item.CategoriesDisplay + '</td><td>'
+                    + "<a href='#' class='fa fa-eye' onclick=AssignEmployeeInfo('" + item.AssignEmployeeId + "');>" + item.AssignEmployeeDisplay + "</a>" + '</td><td>'
+                    + item.DocumentStatusDisplay + '</td><td>'
+                    + ConvertDateToDDMMYYYY(item.CreatedDate) + '</td></tr>';
+            }
+        });
+        $('#tblDocumentDeepSearch').append(trHTML);
+    }
+</script>
+

@@ -1,0 +1,217 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <form id="frmDocument">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <input type="hidden" asp-for="CreatedDate" />
+                <input type="hidden" asp-for="CreatedBy" />
+
+
+                <div class="card card-primary card-outline card-tabs">
+                    <div class="card-header p-0 pt-1 border-bottom-0">
+                        <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="Document" data-toggle="pill" href="#divDocument"
+                                    role="tab" aria-controls="Document" aria-selected="true">Document Info</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Tag" data-toggle="pill" href="#divTag" role="tab"
+                                    aria-controls="Tag" aria-selected="true">Tag</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Comment" data-toggle="pill" href="#divComment" role="tab"
+                                    aria-controls="Comment" aria-selected="true">Comment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Assign" data-toggle="pill" href="#divAssign" role="tab"
+                                    aria-controls="Assign" aria-selected="false">Assign</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="tab-content" id="tabContent">
+                            <div class="tab-pane fade show active" id="divDocument" role="tabpanel"
+                                aria-labelledby="divDocument">
+                                <div class="row">
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="Name" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Name" class="form-control" id="Name" type="text" value="test"/>
+                                                <span asp-validation-for="Name" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="FilesDirName" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="FilesDirName" class="form-control" id="FilesDirName"
+                                                    type="text" readonly />
+                                                <span asp-validation-for="FilesDirName" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="CategoriesId" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <select asp-for="CategoriesId"
+                                                    asp-items="@ViewBag.ddlDocumentCategories" id="CategoriesId"
+                                                    class="form-control" style="width:100%;">
+                                                    <option disabled selected>--- SELECT ---</option>
+                                                </select>
+                                                <span asp-validation-for="CategoriesId" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="DocumentStatus" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <select asp-for="DocumentStatus" asp-items="@ViewBag.ddlDocumentStatus"
+                                                    id="DocumentStatus" class="form-control" style="width:100%;">
+                                                    <option disabled selected>--- SELECT ---</option>
+                                                </select>
+                                                <span asp-validation-for="DocumentStatus" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="IsFileSaveInDB" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9 text-left">
+                                                <input asp-for="IsFileSaveInDB" id="IsFileSaveInDB"
+                                                    type="checkbox" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">File</label>
+                                            <div class="col-sm-9">
+                                                <span class="control-fileupload">
+                                                    <label for="file">Choose a file :</label>
+                                                    <input type="file" asp-for="Files" id="Files" multiple />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Notes" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <textarea asp-for="Notes" class="form-control" id="Notes"
+                                                    type="text" rows="3"></textarea>
+                                                <span asp-validation-for="Notes" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show" id="divTag" role="tabpanel" aria-labelledby="divTag">
+                                <div class="row">
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="Tag01" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Tag01" class="form-control" id="Tag01" type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Tag02" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Tag02" class="form-control" id="Tag02" type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Tag03" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Tag03" class="form-control" id="Tag03" type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Tag04" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Tag04" class="form-control" id="Tag04" type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Tag05" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Tag05" class="form-control" id="Tag05" type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-6">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade show" id="divComment" role="tabpanel"
+                                aria-labelledby="divComment">
+                                <partial name="_AddNewComment.cshtml" />
+                            </div>
+                            <div class="tab-pane fade" id="divAssign" role="tabpanel" aria-labelledby="divAssign">
+                                <div class="row">
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="AssignEmployeeId" class="col-sm-4 col-form-label"></label>
+                                            <div class="col-sm-8">
+                                                <select asp-for="AssignEmployeeId" asp-items="@ViewBag.GetddlEmployee"
+                                                    id="AssignEmployeeId" class="form-control" style="width:100%;">
+                                                    <option selected value="0">Unassigned</option>
+                                                </select>
+                                                <span asp-validation-for="AssignEmployeeId" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-sm-6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 col-sm-6">
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9">
+                                <input type="button" id="btnSave" value="Save" onclick="Save()" class="btn btn-info">
+                                <button type="button" id="btnClose" class="btn btn-danger"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Set a default value for the "Name" input field
+        // var NameValue = document.getElementById("Name").value;
+        document.getElementById("Name").placeholder = "Enter Name";
+        document.getElementById("Name").value="";
+        // Remove default notes value
+        document.getElementById("Notes").value = "";
+
+        // // Add an event listener to the submit button
+        // document.getElementById("frmDocument").addEventListener("submit", function (event) {
+        //     // Change the value of the "Name" input field
+        //     document.getElementById("Name").value = document.getElementById("Name").placeholder;
+        // });
+        $("#AssignEmployeeId").select2();
+        $("#CategoriesId").select2();
+        $("#DocumentStatus").select2();
+    });
+</script>

@@ -1,0 +1,84 @@
+﻿@model DocumentMS.Models.AccountViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<p class="login-box-msg">Sign in to start your session</p>
+<form id="frmLogin" aria-labelledby="login-heading">
+
+    <input type="hidden" asp-for="Longitude" id="Longitude" />
+    <input type="hidden" asp-for="Latitude" id="Latitude" />
+
+    <div>
+        <label asp-for="Email"></label>
+        <div class="input-group mb-3">
+            @* <input asp-for="Email" type="email" value="admin@gmail.com" class="form-control" placeholder="Email" aria-required="true" aria-describedby="emailHelp" /> *@
+            <input asp-for="Email" type="email" class="form-control" placeholder="Email" aria-required="true" aria-describedby="emailHelp" />
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-envelope" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+        <span id ="emailHelp" asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <div class="input-group mb-3">
+            @* <input asp-for="Password" type="password" value="123" class="form-control" placeholder="Password" aria-required="true" aria-describedby="passwordHelp" /> *@
+            <input asp-for="Password" type="password" class="form-control" placeholder="Password" aria-required="true" aria-describedby="passwordHelp" />
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-lock" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+        <span id="passwordHelp" asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-8">
+            <div class="icheck-primary">
+                <input type="checkbox" asp-for="RememberMe" id="remember">
+                <label for="remember">
+                    Remember Me
+                </label>
+            </div>
+        </div>
+        <div class="col-4">
+            <button type="button" id="btnUserLogin"
+                class="btn btn-danger btn-sm btn-block btn-rounded text-uppercase waves-effect waves-light"
+                onclick="LoginAction()">Sign In</button>
+        </div>
+    </div>
+    <br /><br />
+    <a asp-action="ForgotPassword">I forgot my password</a><br>
+    <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" class="text-center">Register a new
+        membership</a>
+    <span class="text-danger">@Html.ValidationSummary(false)</span>
+</form>
+
+<script src="~/js/LoginOperation.js"></script>
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        $(document).ready(function () {
+            //$("#btnUserLogin").trigger('click');
+        });
+
+        var GetLoginCred = function () {
+            var _lblEmail = $("#lblEmail").text();
+            var _lblPassword = $("#lblPassword").text();
+            $("#Email").val(_lblEmail);
+            $("#Password").val(_lblPassword);
+        }
+
+        var GetLoginCredClear = function () {
+            $("#Email").val('');
+            $("#Password").val('');
+            $("#Email").focus();
+        }
+    </script>
+}
+

@@ -1,0 +1,521 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DocumentMS
+build_property.RootNamespace = DocumentMS
+build_property.ProjectDir = C:\Users\Ngnotue\Documents\ProjectDMS\Program5.6.1\Program5.6Sending\DocumentMS\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\Ngnotue\Documents\ProjectDMS\Program5.6.1\Program5.6Sending\DocumentMS
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/ConfirmEmailNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWxOb3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/ExternalLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/Lockout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/LoginWith2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/LoginWithRecoveryCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/SignedOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduZWRPdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Account/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Comment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Comment/_AddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxfQWRkRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Comment/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxfRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/CompanyInfo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/CompanyInfo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Dashboard/_DocumentSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXF9Eb2N1bWVudFN1bW1hcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Dashboard/_PieChartDocumentCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXF9QaWVDaGFydERvY3VtZW50Q2F0ZWdvcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Dashboard/_RecentRegisteredUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXF9SZWNlbnRSZWdpc3RlcmVkVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Dashboard/_UserSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXF9Vc2VyU3VtbWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentCategories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRDYXRlZ29yaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentCategories/_AddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRDYXRlZ29yaWVzXF9BZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentCategories/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRDYXRlZ29yaWVzXF9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentDeepSearch/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnREZWVwU2VhcmNoXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentGeneral/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRHZW5lcmFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentGeneral/_AddNewComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRHZW5lcmFsXF9BZGROZXdDb21tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentGeneral/_DocInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRHZW5lcmFsXF9Eb2NJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentGeneral/_DocumentFileDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRHZW5lcmFsXF9Eb2N1bWVudEZpbGVEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentHistory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRIaXN0b3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentHistory/_AddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRIaXN0b3J5XF9BZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentHistory/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRIaXN0b3J5XF9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentPublic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQdWJsaWNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentPublic/_AddNewComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQdWJsaWNcX0FkZE5ld0NvbW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentPublic/_DocInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQdWJsaWNcX0RvY0luZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentPublic/_DocumentFileDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQdWJsaWNcX0RvY3VtZW50RmlsZURldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentPublic/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQdWJsaWNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentStatus/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRTdGF0dXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentStatus/_AddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRTdGF0dXNcX0FkZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/DocumentStatus/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRTdGF0dXNcX0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0FkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_AddNewComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0FkZE5ld0NvbW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_AddSingleFile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0FkZFNpbmdsZUZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_AllowedUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0FsbG93ZWRVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_DocInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0RvY0luZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_DocumentFileDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0RvY3VtZW50RmlsZURldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_DocumentHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0RvY3VtZW50SGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_EditAllowedUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX0VkaXRBbGxvd2VkVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Document/_Share.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcX1NoYXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailConfig/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxDb25maWdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailConfig/_AddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxDb25maWdcX0FkZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailConfig/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxDb25maWdcX0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailSetting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXR0aW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailSetting/_SendGridSettingAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXR0aW5nXF9TZW5kR3JpZFNldHRpbmdBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailSetting/_SendGridSettingDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXR0aW5nXF9TZW5kR3JpZFNldHRpbmdEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailSetting/_SMTPEmailSettingAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXR0aW5nXF9TTVRQRW1haWxTZXR0aW5nQWRkRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailSetting/_SMTPEmailSettingDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXR0aW5nXF9TTVRQRW1haWxTZXR0aW5nRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailTemplate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxUZW1wbGF0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailTemplate/_AddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxUZW1wbGF0ZVxfQWRkRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/EmailTemplate/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxUZW1wbGF0ZVxfRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/IdentitySetting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlTZXR0aW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/IdentitySetting/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlTZXR0aW5nXF9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/LoginHistory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5IaXN0b3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/LoginHistory/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5IaXN0b3J5XF9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/ManageUserRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclJvbGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/ManageUserRoles/_AddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclJvbGVzXF9BZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/ManageUserRoles/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclJvbGVzXF9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/ManageUserRoles/_Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclJvbGVzXF9JbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/ManageUserRoles/_ManageRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclJvbGVzXF9NYW5hZ2VSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/ManageUserRoles/_ManageRoleCardBody.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclJvbGVzXF9NYW5hZ2VSb2xlQ2FyZEJvZHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/ManageUserRoles/_UpdateRoleInUM.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclJvbGVzXF9VcGRhdGVSb2xlSW5VTS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/Disable2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXERpc2FibGUyZmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/EnableAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXEVuYWJsZUF1dGhlbnRpY2F0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/ExternalLogins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXEV4dGVybmFsTG9naW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/GenerateRecoveryCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXEdlbmVyYXRlUmVjb3ZlcnlDb2Rlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/ResetAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXFJlc2V0QXV0aGVudGljYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/SetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXFNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/ShowRecoveryCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXFNob3dSZWNvdmVyeUNvZGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/TwoFactorAuthentication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXFR3b0ZhY3RvckF1dGhlbnRpY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXF9NYW5hZ2VOYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXF9TdGF0dXNNZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/RefreshToken/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVmcmVzaFRva2VuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/RefreshToken/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVmcmVzaFRva2VuXF9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Shared/_Adminlte.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbmx0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Shared/_AdminlteBlank.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbmx0ZUJsYW5rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Shared/_AdminlteFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbmx0ZUZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Shared/_AdminlteMainHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbmx0ZU1haW5IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Shared/_AdminlteMainSidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbmx0ZU1haW5TaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Shared/_AdminltePublic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbmx0ZVB1YmxpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/SystemRole/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3lzdGVtUm9sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/SystemRole/_AddNewRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3lzdGVtUm9sZVxfQWRkTmV3Um9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/SystemRole/_ManageRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3lzdGVtUm9sZVxfTWFuYWdlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_BigModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9CaWdNb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_bootstrapAlert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9ib290c3RyYXBBbGVydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_ExtraBigModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9FeHRyYUJpZ01vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_ImageViewModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9JbWFnZVZpZXdNb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_IndexPagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9JbmRleFBhZ2luYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_MediumModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9NZWRpdW1Nb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_PrintModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9QcmludE1vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_PrintModalAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9QcmludE1vZGFsQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_SmallModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9TbWFsbE1vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UIComponents/_sweetAlert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXF9zd2VldEFsZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserInfoFromBrowser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckluZm9Gcm9tQnJvd3NlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserInfoFromBrowser/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckluZm9Gcm9tQnJvd3NlclxfRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserManagement/_AddUserAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcX0FkZFVzZXJBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserManagement/_EditUserAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcX0VkaXRVc2VyQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserManagement/_ResetPasswordAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcX1Jlc2V0UGFzc3dvcmRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserManagement/_ViewUserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcX1ZpZXdVc2VyRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserProfile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclByb2ZpbGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/UserProfile/_ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclByb2ZpbGVcX1Jlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ngnotue/Documents/ProjectDMS/Program5.6.1/Program5.6Sending/DocumentMS/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

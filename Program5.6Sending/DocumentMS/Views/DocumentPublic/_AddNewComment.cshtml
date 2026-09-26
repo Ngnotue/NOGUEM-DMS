@@ -1,0 +1,42 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+<div class="row" style="overflow-x:auto;">
+    <table id="tblComment" class="DMSRootColorTable" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Comment</th>
+                <th>Comment By</th>
+                <th>Comment Date</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        if (parseFloat($("#Id").val()) > 0) {
+            var result = @Html.Raw(Json.Serialize(Model.listComment));
+            if (result != null) {
+                LoadHTMLTableData(result);
+            }
+        }
+    });
+
+    var LoadHTMLTableData = function (result) {
+        var trHTML = '';
+        $.each(result, function (i, item) {
+            if (item != null) {
+                trHTML += '<tr><td>'
+                    + item.Id + '</td><td>'
+                    + item.Message + '</td><td>'
+                    + item.CreatedBy + '</td><td>'
+                    + ConvertDateToDDMMYYYY(item.CreatedDate) + '</td></tr>';
+            }
+        });
+        $('#tblComment').append(trHTML);
+    }
+</script>

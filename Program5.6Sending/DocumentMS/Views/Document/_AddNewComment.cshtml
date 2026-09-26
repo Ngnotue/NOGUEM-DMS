@@ -1,0 +1,180 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+<div class="row" style="overflow-x:auto;">
+    <table id="tblComment" class="DMSRootColorTable" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Comment</th>
+                <th>Comment By</th>
+                <th>Comment Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+
+<hr />
+<div>
+    <input type="hidden" asp-for="CurrentUserId" id="CurrentUserId" />
+    <input type="hidden" value="1" id="SL" />
+
+    <div class="form-group">
+        <label asp-for="CommentCRUDViewModel.Message" class="control-label"></label>
+        <textarea asp-for="CommentCRUDViewModel.Message" id="Message" class="form-control"></textarea>
+        <span asp-validation-for="CommentCRUDViewModel.Message" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="button" value="Add Comment" class="btn btn-info" onclick="AddNewComment()">
+    </div>
+</div>
+
+<script>
+    var listComment = new Array();
+    $(document).ready(function () {
+        if (parseFloat($("#Id").val()) == 0) {
+            // AddNewCommentTestData();
+            AddCommentAutoGenData();
+        }
+    });
+    // Extension
+    var AddCommentAutoGenData = function(){
+        let i = 1;
+        var Comment = {};
+        var _Date = new Date();
+
+        Comment.Id = i;
+        Comment.DocumentId = 0;
+        Comment.Message = "Auto Generated Comment at, " + _Date.toUTCString();
+        Comment.CreatedBy = $("#CurrentUserId").val();
+        listComment.push(Comment);
+
+
+        if (listComment.length > 0) {
+            listComment.forEach(LoadTableRowFromDB);
+        }
+
+        $("#SL").val(6);
+        $("#Name").val(GenRanString(10));
+        $("#Notes").val(GenRanString(16));
+        $('#CategoriesId').val(6);
+        $('#DocumentStatus').val(1);
+    }
+    var AddNewComment = function () {
+        if ($("#Message").val() === "" || $("#Message").val() === null) {
+            Swal.fire({
+                title: 'New comment field can not be null or empty.',
+                icon: "warning",
+                onAfterClose: () => {
+                    $("#Message").focus();
+                }
+            });
+            return;
+        }
+
+        var Comment = {};
+        Comment.Id = parseFloat($("#SL").val());
+        Comment.DocumentId = $("#Id").val();
+        Comment.Message = $("#Message").val();
+        Comment.CreatedBy = $("#CurrentUserId").val();
+
+        if (parseFloat($("#Id").val()) > 0) {
+            AddNewCommentDB(Comment);
+        }
+        else {
+            HLMLTableRow();
+            $("#SL").val(parseFloat($("#SL").val()) + 1);
+            listComment.push(Comment);
+        }
+    }
+
+    var HLMLTableRow = function () {
+        var tBody = $("#tblComment > TBODY")[0];
+        var row = tBody.insertRow(-1);
+
+        var cell = $(row.insertCell(-1));
+        cell.html($("#SL").val());
+
+        var cell = $(row.insertCell(-1));
+        cell.html($("#Message").val());
+
+        var cell = $(row.insertCell(-1));
+        cell.html($("#CurrentUserId").val());
+
+        var cell = $(row.insertCell(-1));
+        cell.html(new Date().toISOString());
+
+        cell = $(row.insertCell(-1));
+        var btnRemove = $("<input />");
+        btnRemove.attr("type", "button");
+        btnRemove.attr('class', 'btn btn-danger btn-xs');
+        btnRemove.attr("onclick", "Remove(this);");
+        btnRemove.val("Remove");
+        cell.append(btnRemove);
+
+        $("#Message").val("");
+    }
+
+    function Remove(button) {
+        var row = $(button).closest("TR");
+        var table = $("#tblComment")[0];
+        table.deleteRow(row[0].rowIndex);
+        var _SL = $("TD", row).eq(0).html();
+
+        if (parseFloat($("#Id").val()) > 0) {
+            var Comment = {};
+            Comment.DocumentId = $("#Id").val();
+            Comment.Message = $("#Message").val();
+
+            DeleteCommentDB(_SL);
+            listComment = listComment.filter((item) => item.Id !== parseFloat(_SL));
+        }
+        else {
+            for (let i = 0; i < listComment.length; i++) {
+                if (listComment[i].SL == _SL) {
+                    listComment.splice(i, 1);
+                }
+            }
+        }
+        toastr.success("Comment removed successfully");
+    }
+
+    //Edit Option: Load Items
+    $(document).ready(function () {
+        if (parseFloat($("#Id").val()) > 0) {
+            var result = @Html.Raw(Json.Serialize(Model.listComment));
+            if (result != null) {
+                result.forEach(LoadTableRowFromDB);
+                listComment = result;
+            }
+        }
+    });
+
+    function LoadTableRowFromDB(item, index) {
+        var tBody = $("#tblComment > TBODY")[0];
+        var row = tBody.insertRow(-1);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.Id);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.Message);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.CreatedBy);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(new Date().toISOString());
+
+        cell = $(row.insertCell(-1));
+        var btnRemove = $("<input />");
+        btnRemove.attr("type", "button");
+        btnRemove.attr('class', 'btn btn-danger btn-xs');
+        btnRemove.attr("onclick", "Remove(this);");
+        btnRemove.val("Remove");
+        cell.append(btnRemove);
+    }
+</script>

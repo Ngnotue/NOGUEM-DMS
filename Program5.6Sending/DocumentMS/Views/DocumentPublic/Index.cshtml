@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-sm-8">
+    </div>
+    <div class="col-sm-4 text-right">
+        <a href="@Url.Action("Login", "Account")" class="DMSRootColor">Or sign in as a different user</a>
+    </div>
+</div>
+
+<div class="panel panel-hash">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-7 pull-right">
+                <h5 class="pull-right"><b>&nbsp;Document List</b></h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-body scroll panel-height">
+        <table id="tblDocument" class="DMSRootColorTable" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Categories</th>
+                    <th>Assign</th>
+                    <th>Status</th>
+                    <th>Created Date</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<style>
+    .panel-heading {
+        padding: 0px 0px 0px 5px;
+    }
+
+    .panel-body {
+        padding: 5px;
+    }
+
+    .h4 {
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        box-shadow: none;
+        border-color: green;
+    }
+</style>
+
+<script src="~/js/DocumentPublic/Document_CRUD.js"></script>
+<script src="~/js/DocumentPublic/Document_Datatable.js"></script>
+
+<script>
+    $(document).ready(function () {
+        DataTableCustomSearchBox('400px', 'Search Document');
+    });
+</script>
+

@@ -1,0 +1,186 @@
+@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+
+<div class="row" style="overflow-x:auto;">
+    <table class="DMSRootColorTable" border="1" id="tblDocumentFileDetails" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>File Name</th>
+                <th>Content Type</th>
+                <th>Length</th>
+                <th>Save In DB</th>
+                <th>Date</th>
+                <th>Added By</th>
+                <th></th>
+                @if (@Model.IsUserAllowed || Model.IsUserAssigned)
+                {
+                    <th></th>
+                }
+            </tr>
+        </thead>
+        <tbody id="tblbodyDeleteDocumentFile"></tbody>
+    </table>
+</div>
+
+<script>
+    var listDocumentFile = new Array();
+    $(document).ready(function () {
+        LoadDocumentFileData();
+    });
+
+    var LoadDocumentFileData = function () {
+        if (parseFloat($("#Id").val()) > 0) {
+            var result = @Html.Raw(Json.Serialize(Model.listDocumentFileCRUDViewModel));
+            //console.log(result);
+            if (result != null) {
+                result.forEach(LoadDocumentFileRowFromDB);
+                listDocumentFile = result;
+            }
+        }
+    }
+
+    var LoadDocumentFileRowFromDB = function (item, index) {
+        var tBody = $("#tblDocumentFileDetails > TBODY")[0];
+        var row = tBody.insertRow(-1);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.Id);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.Name);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.ContentType);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.Length);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.IsFileSaveInDB);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.CreatedDate);
+
+        var cell = $(row.insertCell(-1));
+        cell.html(item.CreatedBy);
+
+        cell = $(row.insertCell(-1));
+
+        if (@Model.IsUserAllowed.ToString().ToLower() ||
+            @Model.IsUserAssigned.ToString().ToLower())
+    {
+            var btnDownload = $("<input />");
+            btnDownload.attr("type", "button");
+            btnDownload.attr("id", "btnDownload" + item.Id);
+            btnDownload.attr('class', 'btn btn-success btn-xs');
+            btnDownload.attr("onclick", "DownloadFile(this);");
+            btnDownload.val("Download");
+            cell.append(btnDownload);
+        }
+        cell = $(row.insertCell(-1));
+        var btnView = $("<input />");
+        btnView.attr("type", "button");
+        btnView.attr("id", "btnView" + item.Id);
+        btnView.attr('class', 'btn btn-info btn-xs');
+        btnView.attr("onclick", "ViewDocumentFile(this);");
+        btnView.val("View");
+        cell.append(btnView);
+    }
+
+
+    var DownloadFile = function (button) {
+        var row = $(button).closest("TR");
+        var _SL = $("TD", row).eq(0).html();
+
+        $("#btnDownload" + _SL).val("Download...");
+        $("#btnDownload" + _SL).attr("disabled", "disabled");
+
+        $.ajax({
+            type: "GET",
+            url: "/Document/DownloadFile?id=" + _SL,
+            success: function (result) {
+                var _base64ToArrayBuffer = base64ToArrayBuffer(result.DocByte);
+                saveByteArray(result.Name, _base64ToArrayBuffer, result.ContentType);
+
+                setTimeout(function () {
+                    $("#btnDownload" + _SL).val("Download");
+                    $("#btnDownload" + _SL).removeAttr('disabled');
+                    toastr.success("File Downloaded successfully.");
+                }, 1500);
+            }
+        });
+    }
+
+    var ViewDocumentFile = function (button) {
+        var row = $(button).closest("TR");
+        var _SL = $("TD", row).eq(0).html();
+
+        $("#btnView" + _SL).val("Viewing...");
+        $("#btnView" + _SL).attr("disabled", "disabled");
+
+        $.ajax({
+            type: "GET",
+            url: "/DocumentPublic/GetViewingFileInfo?id=" + _SL,
+            success: function (result) {
+                if (result.IsFileSaveInDB == false) {
+                    activaTab('divDocumentView');
+                    $('#mswordcontainer').empty();
+                    document.getElementById("embedFileViewer").src = "";
+
+                    let _IsDocx = result.FilePath.includes(".docx");
+                    if (_IsDocx == false) {
+                        document.getElementById("embedFileViewer").src = result.FilePath;
+                    }
+                    else {
+                        PreviewMSWordDoc(result.Id);
+                    }
+                }
+                else {
+                    FieldValidationAlert("#btnDownload" + _SL, 'File Saved in Database, please download and view.', "info");
+                }
+                setTimeout(function () {
+                    $("#btnView" + _SL).val("View");
+                    $("#btnView" + _SL).removeAttr('disabled');
+                }, 1000);
+            }
+        });
+    }
+
+    var PreviewMSWordDoc = function (_SL) {
+        $.ajax({
+            type: "GET",
+            url: "/Document/DownloadFile?id=" + _SL,
+            success: function (result) {
+                var _base64ToArrayBuffer = base64ToArrayBuffer(result.DocByte);
+                //var _blob = new Blob([_base64ToArrayBuffer], { type: result.ContentType });
+                var _file = new File([_base64ToArrayBuffer], result.Name, { type: result.ContentType });
+                if (_file != null) {
+                    var docxOptions = Object.assign(docx.defaultOptions, {
+                        useMathMLPolyfill: true
+                    });
+                    var container = document.querySelector("#mswordcontainer");
+                    docx.renderAsync(_file, container, null, docxOptions);
+                }
+            }
+        });
+    }
+
+    var base64ToArrayBuffer = function (base64) {
+        var binaryString = window.atob(base64);
+        var binaryLen = binaryString.length;
+        var bytes = new Uint8Array(binaryLen);
+        for (var i = 0; i < binaryLen; i++) {
+            var ascii = binaryString.charCodeAt(i);
+            bytes[i] = ascii;
+        }
+        return bytes;
+    }
+    var saveByteArray = function (reportName, byte, _type) {
+        var blob = new Blob([byte], { type: _type });
+        var link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        var fileName = reportName;
+        link.download = fileName;
+        link.click();
+    };
+</script>

@@ -1,0 +1,138 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|c:\\users\\magica\\desktop\\new folder (4)\\program5.6sending\\documentms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|solutionrelative:documentms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|c:\\users\\magica\\desktop\\new folder (4)\\program5.6sending\\documentms\\views\\document\\_editallowedusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|solutionrelative:documentms\\views\\document\\_editallowedusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|c:\\users\\magica\\desktop\\new folder (4)\\program5.6sending\\documentms\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|solutionrelative:documentms\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|c:\\users\\magica\\desktop\\new folder (4)\\program5.6sending\\documentms\\services\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|solutionrelative:documentms\\services\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|c:\\users\\magica\\desktop\\new folder (4)\\program5.6sending\\documentms\\models\\documentviewmodel\\documentcrudviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|solutionrelative:documentms\\models\\documentviewmodel\\documentcrudviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|c:\\users\\magica\\desktop\\new folder (4)\\program5.6sending\\documentms\\views\\document\\_allowedusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|solutionrelative:documentms\\views\\document\\_allowedusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|c:\\users\\magica\\desktop\\new folder (4)\\program5.6sending\\documentms\\views\\document\\_docinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8BCD9477-09FA-489A-9709-01D8F5A43E79}|DocumentMS\\DocumentMS.csproj|solutionrelative:documentms\\views\\document\\_docinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_AllowedUsers.cshtml",
+              "DocumentMoniker": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Views\\Document\\_AllowedUsers.cshtml",
+              "RelativeDocumentMoniker": "DocumentMS\\Views\\Document\\_AllowedUsers.cshtml",
+              "ToolTip": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Views\\Document\\_AllowedUsers.cshtml",
+              "RelativeToolTip": "DocumentMS\\Views\\Document\\_AllowedUsers.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T17:50:29.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\appsettings.json",
+              "RelativeDocumentMoniker": "DocumentMS\\appsettings.json",
+              "ToolTip": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\appsettings.json",
+              "RelativeToolTip": "DocumentMS\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-04T17:09:50.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DocumentCRUDViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Models\\DocumentViewModel\\DocumentCRUDViewModel.cs",
+              "RelativeDocumentMoniker": "DocumentMS\\Models\\DocumentViewModel\\DocumentCRUDViewModel.cs",
+              "ToolTip": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Models\\DocumentViewModel\\DocumentCRUDViewModel.cs",
+              "RelativeToolTip": "DocumentMS\\Models\\DocumentViewModel\\DocumentCRUDViewModel.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAawDkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T16:41:44.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_EditAllowedUsers.cshtml",
+              "DocumentMoniker": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Views\\Document\\_EditAllowedUsers.cshtml",
+              "RelativeDocumentMoniker": "DocumentMS\\Views\\Document\\_EditAllowedUsers.cshtml",
+              "ToolTip": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Views\\Document\\_EditAllowedUsers.cshtml",
+              "RelativeToolTip": "DocumentMS\\Views\\Document\\_EditAllowedUsers.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T16:21:16.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DocumentController.cs",
+              "DocumentMoniker": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Controllers\\DocumentController.cs",
+              "RelativeDocumentMoniker": "DocumentMS\\Controllers\\DocumentController.cs",
+              "ToolTip": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Controllers\\DocumentController.cs",
+              "RelativeToolTip": "DocumentMS\\Controllers\\DocumentController.cs",
+              "ViewState": "AQIAANgAAAAAAAAAAAA4wMQAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T16:07:55.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Common.cs",
+              "DocumentMoniker": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Services\\Common.cs",
+              "RelativeDocumentMoniker": "DocumentMS\\Services\\Common.cs",
+              "ToolTip": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Services\\Common.cs",
+              "RelativeToolTip": "DocumentMS\\Services\\Common.cs",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAlwKsAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T16:20:13.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_DocInfo.cshtml",
+              "DocumentMoniker": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Views\\Document\\_DocInfo.cshtml",
+              "RelativeDocumentMoniker": "DocumentMS\\Views\\Document\\_DocInfo.cshtml",
+              "ToolTip": "C:\\Users\\Magica\\Desktop\\New folder (4)\\Program5.6Sending\\DocumentMS\\Views\\Document\\_DocInfo.cshtml",
+              "RelativeToolTip": "DocumentMS\\Views\\Document\\_DocInfo.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T16:07:49.329Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

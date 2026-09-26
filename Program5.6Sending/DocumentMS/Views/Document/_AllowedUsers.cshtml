@@ -1,0 +1,109 @@
+﻿@model DocumentMS.Models.DocumentViewModel.DocumentCRUDViewModel
+@{
+    var userData = (SelectList)ViewBag.GetddlEmployee;
+}
+<div class="row" style="overflow-x:auto;">
+    <table id="tblAllowedUsers" class="DMSRootColorTable" border="1">
+        <thead>
+            <tr>
+                <th>User Profile Id</th>
+                <th>Application user Id</th>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model is null || !Model.listUsersAllowedCRUDViewModel.Any())
+            {
+                <tr><td>No Shared Users</td></tr>
+            }
+            else
+            {
+                @foreach (var user in Model.listUsersAllowedCRUDViewModel)
+                {
+                    <tr>
+                        <td>@user.UserProfileId</td>
+                        <td>@user.ApplicationUserId</td>
+                        <td>@user.FirstName</td>
+                        <td>@user.Email</td>
+                        <td><button type="button" id="btnRemoveUser" class="btn btn-danger">Remove</button></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<div class="row">
+    <div class="col-6 col-sm-6">
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Select New user</label>
+            <div class="col-sm-8">
+                <select asp-for="@Model.SelectedUserProfiles" asp-items="@userData"
+                        id="AssignEmployeeId" class="form-control" style="width:100%;">
+                    <option selected value="0">Select users</option>
+                </select>
+                <span asp-validation-for=@Model.SelectedUserProfiles class="text-danger"></span>
+                <button type="button" id="btnAddUser" class="btn btn-primary">Add User</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        // Add User button click event
+        $("#btnAddUser").on("click", function () {
+            var selectedUser = $("#AssignEmployeeId option:selected");
+
+            if (selectedUser.val() !== "0") {
+                // Access the userProfileId from the data attribute  
+                var userProfileId = selectedUser.val();
+
+                // Send a POST request to your backend to update the database
+                    $.post("/Document/AddAllowedUserToDoc", { userProfileId: userProfileId, documentId: @Model.Id}, function (data) {
+                    // Assuming the server responds with success
+                    if (data.success) {
+                        // Update the table with the newly selected user
+                        var newRow = "<tr>" +
+                            "<td>" + selectedUser.val() + "</td>" +
+                            "<td>" + selectedUser.val() + "</td>" +
+                            "<td>" + selectedUser.text() + "</td>" +
+                            "<td>" + selectedUser.data("user-email") + "</td>" +
+                            "<td><button type='button' class='btn btn-danger btnRemoveUser'>Remove</button></td>" +
+                            "</tr>";
+
+                        $("#tblAllowedUsers tbody").append(newRow);
+
+                        // Remove the selected item from the select list
+                        selectedUser.remove();
+                    } else {
+                        // Handle errors if needed
+                        // ...
+                    }
+                });
+            }
+        });
+
+        // Remove User button click event (for dynamically added elements)
+        $("#tblAllowedUsers").on("click", "#btnRemoveUser", function () {
+            var row = $(this).closest("tr");
+            var userProfileId = row.find("td:first").text();
+
+            // Send a POST request to your backend to remove the user
+            $.post("/Document/RemoveAllowedUserToDoc", { userProfileId: userProfileId, documentId: @Model.Id}, function (data) {
+                // Assuming the server responds with success
+                if (data.success) {
+                    // Remove the user from the table
+                    row.remove();
+                } else {
+                    // Handle errors if needed
+                    // ...
+                }
+            });
+        });
+    });
+</script>

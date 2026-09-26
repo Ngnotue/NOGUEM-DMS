@@ -1,0 +1,17 @@
+﻿@using Microsoft.Extensions.Options;
+@inject IOptions<DocumentMS.Models.CommonViewModel.ApplicationInfo> _ApplicationInfo;
+
+
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+
+<footer class="main-footer no-print" style="color:#000000">
+    <strong>Copyright &copy; 2023-2024 <a href="@_ApplicationInfo.Value.CopyrightURL"></a>.</strong>
+    All rights reserved for NGNOTUE NOGUEM.
+    <div class="float-right d-none d-sm-inline-block">
+        
+    </div>
+</footer>
+
+

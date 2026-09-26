@@ -1,0 +1,224 @@
+﻿<aside class="main-sidebar sidebar-dark-primary elevation-4" role="complementary" aria-label="Main Sidebar">
+    <a href="@Url.Action("Index", "Dashboard")" class="brand-link" aria-label="Dashboard">
+        <img src='~/images/DMS2.png' alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
+        <span class="brand-text font-weight-light">@Model.ApplicationInfo.ShortName</span>
+    </a>
+
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img loading="lazy" src="@Model.UserProfile.ProfilePicture" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="@Url.Action("Index", "UserProfile")" class="d-block">
+                    @Model.UserProfile.FirstName @Model.UserProfile.LastName
+                </a>
+            </div>
+        </div>
+
+        <nav class="mt-2" role="navigation" aria-label="Main Navigation">
+            <ul class="nav nav-pills nav-sidebar flex-column" role="menu" data-widget="treeview" data-accordion="false">
+                @if (Model.MainMenuViewModel.Document)
+                {
+                    <li class="nav-item" role="menuitem">
+                        <a href="@MainMenu.Document.Path" class="nav-link active" aria-label="Go to @MainMenu.Document.PageName">
+                            <i class="image">
+                                <img loading="lazy" src="/images/dashboard/menu/document2.png" class="img-circle elevation-2" alt="go to Document section">
+                            </i>
+                            <p>
+                                @MainMenu.Document.PageName
+                                <span class="right badge badge-success"></span>
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.DocumentDeepSearch)
+                {
+                    <li class="nav-item" role="menuitem">
+                        <a href="@MainMenu.DocumentDeepSearch.Path" class="nav-link active" aria-label="Go to @MainMenu.DocumentDeepSearch.PageName">
+                            <i class="image">
+                                <img loading="lazy" src="/images/dashboard/menu/deepsearch.png" class="img-circle elevation-2" alt="go to Deep Search section">
+                            </i>
+                            <p>
+                                @MainMenu.DocumentDeepSearch.PageName
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.DocumentGeneral)
+                {
+                    <li class="nav-item" role="menuitem">
+                        <a href="@MainMenu.DocumentGeneral.Path" class="nav-link active" aria-label="Go to @MainMenu.DocumentGeneral.PageName">
+                            <i class="image">
+                                <img loading="lazy" src="/images/dashboard/menu/documentgen.png" class="img-circle elevation-2" alt="go to General Document section">
+                            </i>
+                            <p>
+                                @MainMenu.DocumentGeneral.PageName
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.UserManagement)
+                {
+                    <li class="nav-item" role="menuitem">
+                        <a href="@MainMenu.UserManagement.Path" class="nav-link active" aria-label="Go to @MainMenu.UserManagement.PageName">
+                            <i class="image">
+                                <img loading="lazy" src="/images/dashboard/menu/user3.png" class="img-circle elevation-2" alt="go to User Management section">
+                            </i>
+                            <p>
+                                @MainMenu.UserManagement.PageName
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.DocumentCategories)
+                {
+                    <li class="nav-item" role="menuitem">
+                        <a href="@MainMenu.DocumentCategories.Path" class="nav-link active" aria-label="Go to @MainMenu.DocumentCategories.PageName">
+                            <i class="nav-icon fas fa-database"></i>
+                            <p>
+                                @MainMenu.DocumentCategories.PageName
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.DocumentStatus)
+                {
+                    <li class="nav-item" role="menuitem">
+                        <a href="@MainMenu.DocumentStatus.Path" class="nav-link active" aria-label="Go to @MainMenu.DocumentStatus.PageName">
+                            <i class="nav-icon fas fa-envelope"></i>
+                            <p>
+                                @MainMenu.DocumentStatus.PageName
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.Comment)
+                {
+                    <li class="nav-item" role="menuitem">
+                        <a href="@MainMenu.Comment.Path" class="nav-link active" aria-label="Go to @MainMenu.Comment.PageName">
+                            <i class="nav-icon fas fa-comment"></i>
+                            <p>
+                                @MainMenu.Comment.PageName
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.DocumentHistory)
+                {
+                    <li class="nav-item" role="menuitem">
+                        <a href="@MainMenu.DocumentHistory.Path" class="nav-link active" aria-label="Go to @MainMenu.DocumentHistory.PageName">
+                            <i class="nav-icon fas fa-history"></i>
+                            <p>
+                                @MainMenu.DocumentHistory.PageName
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.Settings)
+                {
+                    <li class="nav-item has-treeview" role="menuitem">
+                        <a href="#" class="nav-link active" aria-expanded="false">
+                            <i class="image">
+                                <img loading="lazy" src="/images/dashboard/menu/settings2.png" class="img-circle elevation-2" alt="go to Settings section">
+                            </i>
+                            <p>
+                                Settings
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview" role="menu">
+                            @if (Model.MainMenuViewModel.EmailSetting)
+                            {
+                                <li class="nav-item" role="menuitem">
+                                    <a href="@MainMenu.EmailSetting.Path" class="nav-link" aria-label="Go to @MainMenu.EmailSetting.PageName">
+                                        <i class="nav-icon fas fa-envelope"></i>
+                                        <p>@MainMenu.EmailSetting.PageName</p>
+                                    </a>
+                                </li>
+                            }
+                            @if (Model.MainMenuViewModel.EmailConfig)
+                            {
+                                <li class="nav-item" role="menuitem">
+                                    <a href="@MainMenu.EmailConfig.Path" class="nav-link" aria-label="Go to @MainMenu.EmailConfig.PageName">
+                                        <i class="nav-icon fas fa-envelope"></i>
+                                        <p>@MainMenu.EmailConfig.PageName</p>
+                                    </a>
+                                </li>
+                            }
+                            @if (Model.MainMenuViewModel.LoginHistory)
+                            {
+                                <li class="nav-item" role="menuitem">
+                                    <a href="@MainMenu.LoginHistory.Path" class="nav-link" aria-label="Go to @MainMenu.LoginHistory.PageName">
+                                        <i class="nav-icon fas fa-history"></i>
+                                        <p>@MainMenu.LoginHistory.PageName</p>
+                                    </a>
+                                </li>
+                            }
+                            @if (Model.MainMenuViewModel.IdentitySetting)
+                            {
+                                <li class="nav-item" role="menuitem">
+                                    <a href="@MainMenu.IdentitySetting.Path" class="nav-link" aria-label="Go to @MainMenu.IdentitySetting.PageName">
+                                        <i class="nav-icon fas fa-user-secret"></i>
+                                        <p>@MainMenu.IdentitySetting.PageName</p>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
+                @if (Model.MainMenuViewModel.ManageUserRoles)
+                {
+                    <li class="nav-item has-treeview" role="menuitem">
+                        <a href="#" class="nav-link active" aria-expanded="false" style="background-color: grey">
+                            <i class="nav-icon fas fa-user-shield"></i>
+                            <p>
+                                Manage User Roles
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview" role="menu">
+                            @if (Model.MainMenuViewModel.ManageUserRoles)
+                            {
+                                <li class="nav-item" role="menuitem">
+                                    <a href="@MainMenu.ManageUserRoles.Path" class="nav-link" aria-label="Go to @MainMenu.ManageUserRoles.PageName">
+                                        <i class="nav-icon fas fa-desktop"></i>
+                                        <p>@MainMenu.ManageUserRoles.PageName</p>
+                                    </a>
+                                </li>
+                            }
+                            @if (Model.MainMenuViewModel.SystemRole)
+                            {
+                                <li class="nav-item" role="menuitem">
+                                    <a href="@MainMenu.SystemRole.Path" class="nav-link" aria-label="Go to @MainMenu.SystemRole.PageName">
+                                        <i class="nav-icon fas fa-toolbox"></i>
+                                        <p>@MainMenu.SystemRole.PageName</p>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</aside>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var url = window.location.href;
+        document.querySelectorAll('ul.nav-sidebar a').forEach(function (link) {
+            if (link.href === url) {
+                link.classList.add('active');
+            }
+        });
+
+        document.querySelectorAll('ul.nav-treeview a').forEach(function (link) {
+            if (link.href === url) {
+                link.closest('.nav-treeview').classList.add('menu-open');
+                link.closest('.nav-treeview').previousElementSibling.classList.add('active');
+            }
+        });
+    });
+</script>

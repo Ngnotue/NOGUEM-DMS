@@ -1,0 +1,17 @@
+@model DocumentMS.Models.CommentViewModel.CommentCRUDViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="DMSRootColorTable">
+            <tr><th>Id</th><td>@Model.Id</td></tr>
+            <tr><th>Document Id</th><td>@Model.DocumentId</td></tr>
+            <tr><th>Message</th><td>@Model.Message</td></tr>
+            <tr><th>Is Deleted</th><td>@Model.IsDeleted</td></tr>
+            <tr><th>Is Admin</th><td>@Model.IsAdmin</td></tr>
+            <tr><th>Created Date</th><td>@Model.CreatedDate</td></tr>
+            <tr><th>Modified Date</th><td>@Model.ModifiedDate</td></tr>
+            <tr><th>Created By</th><td>@Model.CreatedBy</td></tr>
+            <tr><th>Modified By</th><td>@Model.ModifiedBy</td></tr>
+        </table>
+    </div>
+</div>

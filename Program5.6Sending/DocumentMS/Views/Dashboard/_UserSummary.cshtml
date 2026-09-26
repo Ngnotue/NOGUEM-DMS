@@ -1,0 +1,58 @@
+﻿@model DocumentMS.Models.DashboardViewModel.DashboardSummaryViewModel
+
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "UserManagement")">
+            <div class="info-box">
+                <span class="box">
+                    <img src="/images/dashboard/user.png" alt="Total user Icon">
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Total User</span>
+                    <h2>@Model.TotalUser</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "UserManagement")">
+            <div class="info-box">
+                <span class="box">
+                    <img src="/images/dashboard/user_active.png" alt="Active users icon">
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Active User</span>
+                    <h2>@Model.TotalActive</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "UserManagement")">
+            <div class="info-box">
+                <span class="box">
+                    <img src="/images/dashboard/close.png" alt="Inactive users icon">
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Inactive User</span>
+                    <h2>@Model.TotalInActive</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="#" onclick="AddEditUserAccount(0)">
+            <div class="info-box">
+                <span class="box">
+                    <img src="/images/dashboard/add.png" alt="Add new user icon">
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Add New User</span>
+                    <h2></h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script src="~/js/UserManagement/UserManagement_CRUD.js"></script>

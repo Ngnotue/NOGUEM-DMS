@@ -1,0 +1,16 @@
+﻿
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+USE [master]
+GO
+ALTER DATABASE [DocumentMS] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [DocumentMS]
+GO
+
+Publish App:
+dotnet publish -c Release -p:UseAppHost=false
+

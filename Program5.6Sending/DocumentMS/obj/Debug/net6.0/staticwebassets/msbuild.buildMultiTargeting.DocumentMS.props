@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DocumentMS.props" />
+</Project>
